@@ -1,0 +1,17 @@
+<form method = "POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="email-field">
+            {{ form.email.label }}
+            {{  form.email(class = "form-control", placeholder = "Place Email Here!", style="border: 2px solid black; border-radius: 0%;") }}
+        </fieldset>
+        <fieldset id="pass-field">
+            {{ form.password.label }}
+            {{  form.password(class = "form-control", placeholder = "Password", style="border: 2px solid black; border-radius: 0%;") }}
+        </fieldset>
+
+        <!-- Submit Area Button -->
+        {{ form.submit_button(class = "mc-button", onmousedown="click_sound(event)", style="margin: 30px auto 0px;") }}
+
+    </div>
+</form>

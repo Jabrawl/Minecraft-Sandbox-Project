@@ -1,0 +1,1 @@
+gunicorn "block_inventory:app"

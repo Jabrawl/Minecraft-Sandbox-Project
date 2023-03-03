@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <header class="row" id="build-header">
+        <div class="obby1"></div>
+        <div class="obby2"></div>
+        <div class="obby3"></div>
+        <div class="obby4"></div>
+        <div class="col-10 contents-div">
+            <h2>Utilize your block collection and build to your imagination!</h2>
+        </div>
+    </header>
+    <section class="row" id="build-collection">
+        <div class="col-10 contents-div">
+            <h2>Build a project using any of the blocks you've collected!</h2>
+            <div class="block-collection">
+                {% for block in blocks %}
+                    <a href="{{ url_for('site.profile', c_block=block.id) }}" onmousedown="click_sound(event)">
+                        <img src="../../static/images/block/{{ block['name'] }}.png" alt="No Texture" class="my-block">        
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="row" id="build-project">
+        <!-- <div class="col-10 contents-div">
+        </div> -->
+        <div class="col-10 contents-div project-buttons">
+            <a href="#" class="new-project mc-button">New Project</a>
+            <a href="#" class="open-project mc-button">Open Project</a>
+            <a href="#" class="delete-project mc-button">Delete Project</a>
+            <a href="#" class="view-project mc-button">View Project</a>
+        </div>
+    </section>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock content %}

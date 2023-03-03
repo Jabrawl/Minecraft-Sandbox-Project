@@ -1,0 +1,357 @@
+.mc-button {
+    background-color: #848484;
+    border: 3px solid black;
+    border-radius: 0px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 65px;
+    text-shadow: 3px 3px 0px rgba(26, 26, 26, 0.7);
+}
+.mc-button:hover {
+    background-color: #848484;
+    border: 3px solid white;
+    border-radius: 0px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 65px;
+}
+
+/* Nav Styles */
+.ct-nav {
+    background-image: url('../images/block/dirt.png');
+    background-repeat: repeat-x;
+    background-size: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ct-nav img{
+    width: 300px;
+    margin-left: 2vw;
+}
+
+
+ul#horizontal-list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 696px;
+    list-style: none;
+    margin: 0px !important;
+       
+}
+
+ul#horizontal-list li, ul#horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: white;
+    font-family: MinecraftiaRegular;
+    white-space: nowrap;
+}
+/* End of navbar styles */
+
+.contents-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main section of index.html */
+#header-main {
+    height: 264px;
+    background-image: url('../images/block/coal_ore.png'), url('../images/block/gold_ore.png'), url('../images/block/redstone_ore.png'), url('../images/block/iron_ore.png'), url('../images/block/diamond_ore.png'), url('../images/block/stone.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    background-size: 66px, 66px, 66px, 66px, 66px, 66px;
+    /* background-position: 792px 66px, 528px 0px, 198px 132px, 1782px 132px, 66px 66px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: MinecraftiaRegular;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+}
+
+#section-main {
+    height: 792px;
+    background-image: url('../images/block/deepslate_emerald_ore.png'), url('../images/block/deepslate_gold_ore.png'), url('../images/block/deepslate_redstone_ore.png'), url('../images/block/deepslate_iron_ore.png'), url('../images/block/deepslate_diamond_ore.png'), url('../images/block/deepslate.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    background-size: 66px, 66px, 66px, 66px, 66px, 66px;
+    /* background-position: 1386px 132px, 990px 198px, 924px 594px, 330px 330px, 1914px 396px, 66px 66px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: MinecraftiaRegular;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+}
+
+#section-main .contents-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#section-main .contents-div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ 
+#footer-logo{
+    width: 100%;
+    max-width: 100%;
+}
+
+#footer-main {
+    height: 330px;
+    background-image: url('../images/block/bedrock.png');
+    background-repeat: repeat;
+    background-size: 66px;
+    background-position: 66px 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: MinecraftiaRegular;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+}
+
+
+/* End of Main Section */
+/* Profile Styles */
+
+
+#profile-header {
+    height: 330px;
+    background-image: url('../images/block/dark_oak_log.png');
+    background-repeat: repeat;
+    background-size: 66px;
+    background-position: 66px 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: MinecraftiaRegular;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+}
+
+#block-section {
+    height: 396px;
+    background-image: url('../images/block/oak_log.png');
+    background-repeat: repeat;
+    background-size: 66px;
+    background-position: 66px 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: MinecraftiaRegular;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+}
+
+#display-block {
+    height: 80px;
+    width: 80px;
+    border: 2.5px white solid;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#block-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.missing-block {
+    font-size: 25px;
+}
+
+
+#blocks-section {
+    height: 396px;
+    background-image: url('../images/block/oak_planks.png');
+    background-repeat: repeat;
+    background-size: 66px;
+    background-position: 66px 66px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    color: white;
+    font-family: MinecraftiaRegular;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+}
+
+.block-collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px 0 0 0;
+    gap: 10px;
+
+}
+
+.block-collection a {
+    color: white;
+    text-decoration: none;
+    word-wrap: break-word;
+    width: 66px;
+    height: 66px;    
+    border: 2.5px white solid;
+}
+
+.my-block {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* END OF PROFILE STYLES */
+/* BUILD PAGE STYLES */
+
+
+#build-header {
+    position: relative;
+    height: 330px;
+    background-image: url('../images/block/nether_portal.png');
+    background-repeat: repeat;
+    background-size: 66px;
+    background-position: 66px 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: MinecraftiaRegular;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+}
+
+.obby1, .obby4 {
+    position: absolute;
+    height: 66px;
+    background-image: url('../images/block/obsidian.png');
+    background-repeat: repeat;
+    background-size: 66px;
+}
+
+.obby2, .obby3 {
+    position: absolute;
+    height: 198px;
+    max-width: 66px;
+    background-image: url('../images/block/obsidian.png');
+    background-repeat: repeat;
+    background-size: 66px;
+}
+
+.obby1 {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.obby2 {
+    top: 66px;
+    left: 0;
+}
+
+.obby3 {
+    top: 66px;
+    right: 0;
+}
+
+.obby4 {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#build-collection {
+    position: relative;
+    height: 462px;
+    background-image: url('../images/block/nether_bricks.png');
+    background-repeat: repeat;
+    background-size: 66px;
+    background-position: 66px 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: MinecraftiaRegular;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+}
+
+#build-project {
+    position: relative;
+    height: 462px;
+    background-image: url('../images/block/netherrack.png');
+    background-repeat: repeat;
+    background-size: 66px;
+    background-position: 66px 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: MinecraftiaRegular;
+    text-shadow: 3px 3px 4px rgba(0,0,0,1);
+}
+
+.project-buttons {
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* END OF BUILD PAGE STYLES */
+/* AUTH PAGE STYLES */
+
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-shadow: 3px 3px 0px rgba(26, 26, 26, 1);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form .row aside {
+    width: 100%;
+}
+
+
+.auth-page {
+    background-image: url('../images/panorama.png');
+    background-repeat: repeat-x;
+    animation: scroll-background 38s linear infinite;
+    height: 100vh; /* Set the body height to 100vh */
+    background-size: auto 101%; /* Set the background size to auto width and 100% height */
+    background-position: center;
+    color: white;
+    font-family: Minecraftia;
+}
+
+
+@keyframes scroll-background {
+    0% {
+        background-position: 0 0;
+    }
+    /* 50% {
+        background-position: 0 0;
+    } */
+    100% {
+        background-position: 100% 0;
+    }
+}

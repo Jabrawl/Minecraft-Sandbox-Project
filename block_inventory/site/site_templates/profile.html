@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+    <header class="row" id="profile-header">
+        <div class="col-10 contents-div">
+            <h2>Enter a Minecraft block name: (Oak Log, Glass, Sand)</h2>
+            <form method="POST" style="display: flex; flex-direction: column; align-items: center;">
+                {{ form.hidden_tag() }}
+                <fieldset id="first-field">
+                    {{  form.block(class = "form-control", placeholder = "Enter Your Block Here", style="border: 3px solid black; border-radius: 0%;") }}
+                </fieldset>
+                {{ form.submit_button(class = "mc-button", onmousedown="click_sound(event)", style="font-size:22px; margin: 20px auto 0px;") }}
+            </form>
+        </div>
+    </header>
+
+    <section class="row" id="block-section">
+        <div class="col-10 contents-div">
+            
+            <h2>Your Block:</h2>
+            {% if mcd_block %}
+            <img src="{{ block_texture }}" alt="No Texture" id="display-block" />
+            <h4>{{ mcd_block['displayName'] }}</h4>
+            <div id="block-info">
+                <p>Block Id: {{ mcd_block['id'] }}</p>
+                <p>Item Name: {{ mcd_block['name'] }}</p>
+                <p>Hardness: {{ mcd_block['hardness'] }}</p>
+                <p>Resistance: {{ mcd_block['resistance'] }}</p>
+                <p>Stack Size: {{ mcd_block['stackSize'] }}</p>
+                <p>Diggable: {{ mcd_block['diggable'] }}</p>
+                <p>Transparent: {{ mcd_block['transparent'] }}</p>
+            </div>
+            <form method="POST" action="{{ url_for('site.delete_block', block_id=block.id) }}">
+                <button type="submit" class="btn btn-danger" onmousedown="click_sound(event)">Delete From Collection</button>
+            </form>
+            {% endif %}
+        </div>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category == 'auth-success' %}
+                    <div class="alert alert-{{ category }} contents-div missing-block">
+                        {{ message }}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+    </section>
+
+    
+    <section class="row" id="blocks-section">
+        <div class="col-6 contents-div">
+            <h4>Examine your block collection!</h4>
+            <div class="block-collection">
+                {% for block in blocks %}
+                    <a href="{{ url_for('site.profile', c_block=block.id) }}" onmousedown="click_sound(event)">
+                        <img src="../../static/images/block/{{ block['name'] }}.png" alt="No Texture" class="my-block">        
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock content %}
